@@ -4,3 +4,358 @@ $images-path: "~@collab-ui/core/images";
 
 @import "~@collab-ui/core/scss/collab-ui";
 @import '~@collab-ui/core/scss/layouts/sites';
+
+$font-family-regular: "CiscoSansTT Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-light: "CiscoSansTT Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    font-family: $font-family-light;
+}
+
+.app-content {
+    height: 100%;
+    margin: 0;
+    // background:gray;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.cui-main {
+  height: 100%;
+}
+
+.icon-white {
+    color: white;
+}
+
+.mini-side-bar {
+    background-color: rgb(51, 51, 51);
+    width: 44px;
+    flex-basis: 44px;
+    display: flex;
+    flex-flow: column;
+
+    .mini-side-bar-icon {
+        margin: 0.75rem;
+
+        .active {
+            color: #07c1e4;
+            background: #333333;
+        }
+    }
+}
+
+.activities-column {
+    width: 281px;
+    max-width: 281px;
+    background: white;
+
+    .active-contact-list-header {
+        padding: .5rem;
+        background: #268748;
+        color: white;
+        font-size: 16px;
+        height: 41px;
+    }
+    flex: 1;
+
+    .cui-input {
+        background: rgb(238, 238, 238);
+        border-radius: 2px 2px 2px 2px;
+        height: 28px;
+        width: 256px;
+
+        .cui-icon {
+            top: 5px;
+            left: 20px;
+            margin: 0;
+        }
+    }
+}
+
+#my-webexteams-widget {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.expanded-activity-column {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-basis: 300px;
+    background: white;
+    border-left: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    flex: 2;
+
+    .header {
+        display: flex;
+        background: #f5f5f5;
+
+        span {
+            line-height: 40px;
+            margin-left: 20px;
+        }
+    }
+
+    .chat-body {
+        flex: 1;
+    }
+
+
+    .chat-input {
+        border-top: 1px solid #f5f5f5;
+        background: #f6f6f6;
+        color: #979797;
+        justify-content: flex-end;
+
+        input {
+            border: none;
+            background: inherit;
+            width: 90%;
+            margin: 1rem;
+        }
+    }
+}
+
+.customer-info {
+    width: 400px;
+    background: white;
+
+    .icon-info_20 {
+        color: #07c1e4;
+    }
+
+    .main {
+        padding-top: 4rem;
+        text-align: center;
+
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+
+// .history-data-column {
+//     background: #f5f5f5;
+//     flex: 3;
+
+//     .layer {
+//         background: white;
+//         border-radius: .5rem;
+//         height: 800px;
+//         margin: 0 .75rem .75rem;
+
+//         h4 {
+//             border-bottom: 1px solid #f5f5f5;
+//             margin: 0;
+//             padding: 0.75rem 1.5rem;
+//         }
+
+//         .message-header {
+//             margin-bottom: 0;
+//         }
+//     }
+
+//     .section-box {
+//         border-bottom: 1px solid #f5f5f5;
+//     }
+// }
+
+.incoming-list {
+    flex: 1;
+
+    .incoming-request {
+        width: 280px;
+        background: #f5f5f5;
+        margin-bottom: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        border: 1px solid white;
+
+
+        &.incoming-active-request {
+            background: #dcf3f7;
+        }
+
+        // .active {
+        //     background: #dcf3f7;
+        // }
+
+        .left-icon-column {
+            height: 75px;
+        }
+
+        .request-content {
+            padding-left: .5rem;
+        }
+
+        .focused-request {
+            background: #99ffaa;
+            width: 9px;
+        }
+
+        .cui-avatar {
+            width: .75rem;
+        }
+
+        .incoming-time {
+            span {
+                font-weight: bold;
+                font-size: 12px;
+                margin: 0 .5rem;
+            }
+        }
+    }
+}
+
+.history-row {
+    padding: .5rem;
+    background: white;
+
+    .icon {
+        float: right;
+        margin: .4rem;
+    }
+}
+
+.history-content {
+    background: white;
+
+    .cui-input__icon-container {
+        margin-top: .5rem;
+    }
+
+    .incoming-request {
+        background: white;
+    }
+}
+
+
+.message-box {
+    display: flex;
+    flex-flow: row;
+    padding: 1.25rem;
+
+    .icon {
+        margin: 0 1rem;
+    }
+
+    .message-box-content {
+        .message-header {
+            // margin: 0 1rem;
+            .name {
+                font-size: 14px;
+            }
+            margin-bottom: 0.5rem;
+            .time {
+                font-size: 12px;
+                margin-left: 2rem;
+            }
+        }
+        .message-text {
+            font-size: 14px;
+        }
+    }
+}
+
+.profile-row {
+    .message-header {
+        font-size: 22px;
+        margin: 0;
+
+        .float-right {
+            float: right;
+        }
+    }
+    .message-text {
+        font-size: 12px;
+        color: #8ab895;
+    }
+}
+
+.icon-text-row {
+    .icon {
+        margin: 0 0.75rem 0 0;
+    }
+
+    span {
+        font-size: 12px;
+    }
+}
+
+.green {
+    color: #8ab895;
+}
+
+.history-request {
+    border: 1px solid #cecece;
+    // background: #f5f5f5;
+    margin-bottom: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    width: 280px;
+}
+
+.icon {
+    vertical-align: -3px;
+}
+
+.table {
+    display: flex;
+    text-align: center;
+    .header-column {
+        text-align: right;
+        width: 45%;
+        margin-right: 1rem;
+        font-weight: bold;
+    }
+
+    .value-column {
+        text-align: left;
+        width: 55%;
+    }
+}
+
+.menu-row {
+    padding: 0;
+    background: #f5f5f5;
+
+    &.inline {
+        display: inline-block;
+    }
+
+    &.left {
+        margin-left: auto;
+    }
+
+    .menu-option {
+        margin: 0 1rem;
+    }
+
+    .icon-chat_16 {
+        color: #07c1e4;
+    }
+
+    .icon-div {
+        display: inline-block;
+        padding: 0.4rem;
+
+        &.active {
+            color: #07c1e4;
+            border-bottom: 2px solid #07c1e4;
+        }
+    }
+}

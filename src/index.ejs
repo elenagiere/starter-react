@@ -10,10 +10,49 @@
     This is an example of how to add features to index.html for only one environment.
     To track JavaScript errors via TrackJS, sign up for a free trial at TrackJS.com and enter your token in /webpack.config.prod.js on line 55.
    -->
+
   <% if (htmlWebpackPlugin.options.trackJSToken) { %>
   <script>window._trackJs = {token: '<%= htmlWebpackPlugin.options.trackJSToken %>'};</script>
   <script src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js"></script>
   <% } %>
+
+  <!-- Webex Spaces -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://code.s4d.io/widget-space/production/main.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://code.s4d.io/widget-space/production/bundle.js"></script>
+
+  <!-- Webex Recents -->
+  <!-- Production compiled and minified CSS -->
+<link rel="stylesheet" href="https://code.s4d.io/widget-recents/production/main.css">
+
+<!-- Production compiled and minified JavaScript -->
+<script src="https://code.s4d.io/widget-recents/production/bundle.js"></script>
+
+  <div id="my-webexteams-widget"></div>
+  <script>
+    var spacesWidgetEl = document.getElementById('my-webexteams-widget');
+    // Init a new widget
+    ciscospark.widget(spacesWidgetEl).spaceWidget({
+      accessToken: 'NTIyMGVkMzktYThkYi00ODJiLWI0NmEtYjhmN2Q0ZDVlYzlhMjY1MGNiZWYtZDZl_PF84_1eb65fdf-9643-417f-9974-ad72cae0e10f',
+      destinationType: 'email',
+      destinationId: 'sparkcarebot+elena+agent1@gmail.com',
+      // onEvent: callback
+    });
+
+    // function callback(name, detail) {
+    //   console.log('callback');
+    //   console.log(name);
+    //   console.log(detail);
+    //   if (name === 'messages:created') {
+    //     const createdTimestamp = detail.data.created;
+    //     console.log(createdTimestamp);
+    //     // Perform an action if a new message has been created
+    //   }
+    // }
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8"/>
