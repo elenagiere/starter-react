@@ -1,15 +1,15 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import {bindActionCreators} from 'redux';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
-// import Button from '@collab-ui/react/es/Button';
-import List from '@collab-ui/react/es/List';
-import ListItem from '@collab-ui/react/es/ListItem';
-import Topbar from '@collab-ui/react/es/Topbar';
-import TopbarNav from '@collab-ui/react/es/TopbarNav';
-import TopbarMobile from '@collab-ui/react/es/TopbarMobile';
-import TopbarRight from '@collab-ui/react/es/TopbarRight';
+import Button from '@momentum-ui/react/es/Button';
+import List from '@momentum-ui/react/es/List';
+import ListItem from '@momentum-ui/react/es/ListItem';
+import Topbar from '@momentum-ui/react/es/Topbar';
+import TopbarNav from '@momentum-ui/react/es/TopbarNav';
+import TopbarMobile from '@momentum-ui/react/es/TopbarMobile';
+import TopbarRight from '@momentum-ui/react/es/TopbarRight';
 import * as actions from '../Login/actions';
 
 class AppHeader extends Component {
@@ -20,6 +20,11 @@ class AppHeader extends Component {
 
   render() {
     const logoIcon = <i className="icon icon-cisco-logo" />;
+    const getAvatar = () => {
+      const number = Math.floor(Math.random() * 101);
+      const gender = Math.random() >= 0.5 ? 'women' : 'men';
+      return `https://randomuser.me/api/portraits/${gender}/${number}.jpg`;
+    };
     const navItems = (
       <Fragment>
         <ListItem
@@ -54,69 +59,41 @@ class AppHeader extends Component {
         </List>
     );
 
-    // const topbarRight = this.props.isLoggedIn ? (
-    //   <div className="cui-top-bar__user">
-    //     {/* <Popover
-    //       direction="bottom-right"
-    //       content={topBarPopoverContent}
-    //       popoverTrigger="Click"
-    //       closeOnClick> */}
-    //       <button
-    //         className="cui-avatar cui-button--none"
-    //         aria-haspopup="true"
-    //         onClick={this.logoutUser}>
-    //         <img
-    //           className="user-image"
-    //           src={getAvatar()}
-    //           alt="user"
-    //         />
-    //       </button>
-    //     {/*</Popover> */}
-    //   </div>
-    // ) : (
-    //   <div className="cui-top-bar__logged-out">
-    //     <Link to="/login">Log In</Link>
-    //     <Button color="blue">Sign Up</Button>
-    //   </div>
-    // );
-
-    // const topbarRight = (
-    //   <div className="cui-top-bar__user">
-    //     {/* <Popover
-    //       direction="bottom-right"
-    //       content={topBarPopoverContent}
-    //       popoverTrigger="Click"
-    //       closeOnClick> */}
-    //       <button
-    //         className="cui-avatar cui-button--none"
-    //         aria-haspopup="true"
-    //         onClick={this.logoutUser}>
-    //         <img
-    //           className="user-image"
-    //           src={getAvatar()}
-    //           alt="user"
-    //         />
-    //       </button>
-    //     {/*</Popover> */}
-    //   </div>
-    // );
-
     const topbarRight = this.props.isLoggedIn ? (
-      <i className="icon-white icon icon-added-to-space_12" /> 
+      <div className="md-top-bar__user">
+        {/* <Popover
+          direction="bottom-right"
+          content={topBarPopoverContent}
+          popoverTrigger="Click"
+          closeOnClick> */}
+          <button
+            className="md-avatar md-button--none"
+            aria-haspopup="true"
+            onClick={this.logoutUser}>
+            <img
+              className="user-image"
+              src={getAvatar()}
+              alt="user"
+            />
+          </button>
+        {/*</Popover> */}
+      </div>
     ) : (
-      null
+      <div className="md-top-bar__logged-out">
+        <Link to="/login">Log In</Link>
+        <Button color="blue">Sign Up</Button>
+      </div>
     );
 
     return (
       <Fragment>
         <Topbar
-          className="row"
-          title="Customer Journey Platform"
+          title="Collab UI React Starter"
           color="dark"
           image={logoIcon}
           anchor="/"
           fixed>
-          <TopbarNav>{}</TopbarNav>
+          <TopbarNav>{navItems}</TopbarNav>
           <TopbarRight>{topbarRight}</TopbarRight>
           <TopbarMobile>
             {navItems}

@@ -1,16 +1,13 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import Icon from '@collab-ui/react/es/Icon';
+// import Icon from '@collab-ui/react/es/Icon';
 
 class IncomingRequests extends Component {
 
     iconType = () => {
         const iconName = `icon-${this.props.type}_16`;
         return (
-            <Icon 
-            name={iconName}
-            className='mini-side-bar-icon'
-            />
+          <i className={`cui-icon icon ${iconName} mini-side-bar-icon`} />
         );
     };
 

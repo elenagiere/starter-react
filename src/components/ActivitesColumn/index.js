@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import IncomingRequests from '../IncomingRequests';
 import HistoryRequest from '../HistoryRequest';
-import Icon from '@collab-ui/react/es/Icon';
+// import Icon from '@collab-ui/react/es/Icon';
 
 class ActivitiesColumn extends Component {
 
@@ -27,13 +27,13 @@ class ActivitiesColumn extends Component {
                 <span className="menu-option">All</span>
               </div>
               <div className="icon-div">
-                <Icon className="menu-option" name="icon-audio-call_16" />
+              <i className="cui-icon icon icon-audio-call_16 menu-option" />
               </div>
               <div className="icon-div">
-                <Icon className="menu-option" name="icon-email_16" />
+              <i className="cui-icon icon icon-email_16 menu-option" />
               </div>
               <div className="icon-div active">
-                <Icon className="menu-option" name="icon-chat_16" />
+              <i className="cui-icon icon icon-chat_16 menu-option" />
               </div>
           </div>
       <div className="history-content incoming-list">

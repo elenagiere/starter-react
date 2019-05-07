@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 // import PropTypes from 'prop-types';
-import Icon from '@collab-ui/react/es/Icon';
+// import Icon from '@collab-ui/react/es/Icon';
 // import ciscospark from 'ciscospark';
 // import spark from 'ciscospark/env';
 
@@ -36,7 +36,7 @@ class ChatInput extends Component {
         //             roomId: room.id,
         //             personEmail: document.getElementById(`inviteeEmail`).value
         //         })
-        //     ]).then(() => 
+        //     ]).then(() =>
         //         spark.messages.create({
         //             markdown: this.state.value,
         //             roomId: room.id
@@ -55,13 +55,13 @@ class ChatInput extends Component {
             <div className="chat-input">
                 <div className="menu-row">
                     <div className="icon-div">
-                        <Icon className="menu-option" name="icon-attachment_16" />
+                      <i className="cui-icon icon icon-attachment_16 menu-option" />
                     </div>
                     <div className="icon-div">
-                        <Icon className="menu-option" name="icon-text-format_16" />
+                      <i className="cui-icon icon icon-text-format_16 menu-option" />
                     </div>
                     <div className="icon-div">
-                        <Icon className="menu-option" name="icon-markdown_16" />
+                      <i className="cui-icon icon icon-markdown_16 menu-option" />
                     </div>
                 </div>
                 <form id="messenger" onSubmit={this.handleSubmit}>
@@ -71,7 +71,7 @@ class ChatInput extends Component {
                         type="text"
                         value={this.state.value}
                         onChange={this.handleChange}
-                        placeholder="Type your message to Michael Littlefoot" />                 
+                        placeholder="Type your message to Michael Littlefoot" />
                 </form>
             </div>
         </Fragment>

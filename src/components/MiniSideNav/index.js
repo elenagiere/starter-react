@@ -1,21 +1,12 @@
 import React from 'react';
-import Icon from '@collab-ui/react/es/Icon';
 
 const MiniSideNav = () => {
   return (
       <div className="mini-side-bar">
-        <Icon 
-            name='recents_20'
-            className='mini-side-bar-icon'
-            color="white" 
-        />
-        <Icon 
-            name='dialpad_20'
-            className='mini-side-bar-icon'
-            color="white" 
-        />
-        <Icon name='email_20' className='mini-side-bar-icon' color="white" />
-        <Icon name='help-circle_20' className='mini-side-bar-icon' color="white" />
+        <i className="cui-icon icon icon-recents_20 mini-side-bar-icon" />
+        <i className="cui-icon icon icon-dialpad_20 mini-side-bar-icon" />
+        <i className="cui-icon icon icon-email_20 mini-side-bar-icon" />
+        <i className="cui-icon icon icon-help-circle_20 mini-side-bar-icon" />
       </div>
   );
 };

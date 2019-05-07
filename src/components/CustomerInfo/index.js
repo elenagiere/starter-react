@@ -1,19 +1,18 @@
 import React from 'react';
-import Avatar from '@collab-ui/react/es/Avatar';
-import Icon from '@collab-ui/react/es/Icon';
+import Avatar from '@momentum-ui/react/es/Avatar';
 
 const CustomerInfo = () => {
   return (
     <div className="customer-info">
       <div className="menu-row">
           <div className="icon-div active">
-            <Icon className="menu-option" name="icon-info_16" />
+            <i className="cui-icon icon icon-info_16 menu-option" />
           </div>
           <div className="icon-div">
-            <Icon className="menu-option" name="icon-recents_16" />
+            <i className="cui-icon icon icon-recents_16 menu-option" />
           </div>
           <div className="icon-div">
-            <Icon className="menu-option" name="icon-archive_16" />
+            <i className="cui-icon icon icon-archive_16 menu-option" />
           </div>
       </div>
       <div className="main">
