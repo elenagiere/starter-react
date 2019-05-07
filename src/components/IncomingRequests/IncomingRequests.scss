@@ -1,0 +1,39 @@
+.incoming-request {
+  width: 280px;
+  background: #f5f5f5;
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  border: 1px solid white;
+
+
+  &.incoming-active-request {
+      background: #dcf3f7;
+  }
+
+  .left-icon-column {
+      height: 75px;
+  }
+
+  .request-content {
+      padding-left: .5rem;
+  }
+
+  .focused-request {
+      background: #99ffaa;
+      width: 9px;
+  }
+
+  .cui-avatar {
+      width: .75rem;
+  }
+
+  .incoming-time {
+      span {
+          font-weight: bold;
+          font-size: 12px;
+          margin: 0 .5rem;
+      }
+  }
+}

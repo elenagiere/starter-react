@@ -1,0 +1,41 @@
+
+.menu-row {
+  padding: 0;
+  background: #f5f5f5;
+
+  &.inline {
+      display: inline-block;
+  }
+
+  &.left {
+      margin-left: auto;
+  }
+
+  .menu-option {
+      margin: 0 1rem;
+  }
+
+  .icon-chat_16 {
+      color: #07c1e4;
+  }
+
+  .icon-div {
+      display: inline-block;
+      padding: 0.4rem;
+
+      &.active {
+          color: #07c1e4;
+          border-bottom: 2px solid #07c1e4;
+      }
+  }
+}
+
+.icon-text-row {
+  .icon {
+      margin: 0 0.75rem 0 0;
+  }
+
+  span {
+      font-size: 12px;
+  }
+}

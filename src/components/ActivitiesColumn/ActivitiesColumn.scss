@@ -1,0 +1,22 @@
+.activities-column {
+  display: flex;
+  flex-direction: column;
+  width: 281px;
+  max-width: 281px;
+  background: white;
+  flex: 1;
+
+  .cui-input {
+      background: rgb(238, 238, 238);
+      border-radius: 2px 2px 2px 2px;
+      height: 28px;
+      width: 256px;
+
+      .cui-icon {
+          top: 5px;
+          left: 20px;
+          margin: 0;
+      }
+  }
+}
+

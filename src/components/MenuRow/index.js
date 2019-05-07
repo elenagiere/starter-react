@@ -4,21 +4,26 @@ import Icon from '@collab-ui/react/es/Icon';
 
 class MenuRow extends Component {
 
-    // iconType = () => {
-    //     const iconName = `icon-${this.props.type}_16`;
-    //     return (
-    //         <Icon 
-    //         name={iconName}
-    //         className='mini-side-bar-icon'
-    //         />
-    //     );
-    // };
+    icons = () => {
+
+      const icons = this.props.iconNames.map((iconName) => {(
+        <div className="icon-div">
+          <Icon
+            name={`icon-${iconName}_16`}
+            className='mini-side-bar-icon' />
+        </div>
+      );
+    });
+
+      return icons;
+    };
 
   render() {
     return (
     <Fragment>
       <div className="menu-row">
-            <div className="icon-div">
+        {this.icons()}
+            {/* <div className="icon-div">
               <Icon className="menu-option" name="icon-info_16" />
             </div>
             <div className="icon-div">
@@ -26,7 +31,7 @@ class MenuRow extends Component {
             </div>
             <div className="icon-div">
               <Icon className="menu-option" name="icon-archive_16" />
-            </div>
+            </div> */}
         </div>
     </Fragment>
     );
@@ -34,14 +39,12 @@ class MenuRow extends Component {
 }
 
 MenuRow.propTypes = {
-    active: PropTypes.bool,
-    type: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    messagePreview: PropTypes.string.isRequired,
+    iconNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    withText: PropTypes.bool
 };
 
 MenuRow.defaultProps = {
-    active: false
+  withText: false
 };
 
 export default MenuRow;

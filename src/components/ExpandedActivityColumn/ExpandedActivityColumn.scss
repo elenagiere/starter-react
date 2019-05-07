@@ -1,0 +1,32 @@
+$font-family-light: "CiscoSansTT Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+.expanded-activity-column {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex-basis: 300px;
+  background: white;
+  border-left: 1px solid #dedede;
+  border-right: 1px solid #dedede;
+  flex: 2;
+}
+
+#my-webexteams-widget {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  font-family: $font-family-light;
+}
+
+.ciscospark-avatar-wrapper {
+  display: none;
+}
+
+.ciscospark-activity-text {
+  font-family: $font-family-light;
+}
+
+// .ciscospark-meta {
+//   color: #14a792;
+// }

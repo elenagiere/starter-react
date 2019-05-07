@@ -1,0 +1,37 @@
+.history-header-button {
+  padding: .5rem;
+  background: white;
+  // background: #f5f5f5;
+  border: none;
+  width: 100%;
+
+  span {
+    float: left;
+    padding-left: .5rem;
+  }
+
+  .icon {
+      float: right;
+      margin: .4rem;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.float-down {
+  justify-content: flex-end;
+}
+
+.history-content {
+  background: white;
+
+  .cui-input__icon-container {
+      margin-top: .5rem;
+  }
+
+  .incoming-request {
+      background: white;
+  }
+}
