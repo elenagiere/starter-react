@@ -14,7 +14,7 @@ import ExpandedActivityColumn from './ExpandedActivityColumn';
 import CustomerInfo from './CustomerInfo';
 
 import ActivitiesColumn from './ActivitiesColumn';
-// import IncomingRequests from './IncomingRequests';
+// import Task from './Task';
 
 class App extends Component {
 
@@ -45,8 +45,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="cui-main">
-        <AppHeader />
+      <div className="md-main">
+        <AppHeader isLoggedIn={true} />
         <div className="app-content">
           <MiniSideNav />
           <ActivitiesColumn />

@@ -1,17 +1,20 @@
 
 .mini-side-bar {
+  align-items: center;
   background-color: rgb(51, 51, 51);
-  width: 44px;
-  flex-basis: 44px;
+  width: 64px;
+  flex-basis: 64px;
   display: flex;
   flex-flow: column;
 
   .mini-side-bar-icon {
-      margin: 0.75rem;
+      color: white;
+      margin-top: 22px;
+      margin-bottom: 22px;
 
-      .active {
-          color: #07c1e4;
-          background: #333333;
+      &.active {
+        color: #07c1e4;
+        background: #333333;
       }
   }
 }

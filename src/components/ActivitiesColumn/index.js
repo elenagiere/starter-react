@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import IncomingRequests from '../IncomingRequests';
+// import Task from '../Task';
 // import HistoryRequest from '../HistoryRequest';
 // import Icon from '@collab-ui/react/es/Icon';
 import ActiveContactList from '../ActiveContactList';

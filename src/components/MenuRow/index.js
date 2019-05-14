@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import Icon from '@collab-ui/react/es/Icon';
+// import Icon from '@collab-ui/react/es/Icon';
 
 class MenuRow extends Component {
 
@@ -8,9 +8,7 @@ class MenuRow extends Component {
 
       const icons = this.props.iconNames.map((iconName) => {(
         <div className="icon-div">
-          <Icon
-            name={`icon-${iconName}_16`}
-            className='mini-side-bar-icon' />
+          <i className={`cui-icon icon icon-${iconName}_16 mini-side-bar-icon`} />
         </div>
       );
     });
@@ -22,16 +20,15 @@ class MenuRow extends Component {
     return (
     <Fragment>
       <div className="menu-row">
-        {this.icons()}
-            {/* <div className="icon-div">
-              <Icon className="menu-option" name="icon-info_16" />
+            <div className="icon-div">
+            <i className="cui-icon icon icon-info_16 menu-option" />
             </div>
             <div className="icon-div">
-              <Icon className="menu-option" name="icon-recents_16" />
+              <i className="cui-icon icon icon-recents_16 menu-option" />
             </div>
             <div className="icon-div">
-              <Icon className="menu-option" name="icon-archive_16" />
-            </div> */}
+              <i className="cui-icon icon icon-archive_16 menu-option" />
+            </div>
         </div>
     </Fragment>
     );

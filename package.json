@@ -31,15 +31,12 @@
   "author": "Cisco Systems, Inc.",
   "license": "MIT",
   "dependencies": {
-    "@babel/runtime": "^7.4.4",
-    "@collab-ui/react": "^12.0.2",
-    "ciscospark": "^1.52.0",
-    "express": "^4.16.4",
+    "@momentum-ui/react": "^16.0.0",
     "object-assign": "~4.1.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-redux": "~6.0.1",
-    "react-router-dom": "~4.3.1",
+    "react-router-dom": "~4.2.1",
     "react-router-redux": "~5.0.0-alpha.6",
     "redux": "~4.0.1",
     "redux-thunk": "~2.3.0"
@@ -65,7 +62,6 @@
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/plugin-transform-react-constant-elements": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-stage-0": "^7.0.0",
@@ -144,7 +140,6 @@
           "@babel/preset-react"
         ],
         "plugins": [
-          "@babel/transform-runtime",
           "@babel/plugin-syntax-dynamic-import",
           "@babel/plugin-syntax-import-meta",
           "@babel/plugin-proposal-class-properties",

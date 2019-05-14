@@ -1,4 +1,4 @@
-.incoming-request {
+.task {
   width: 280px;
   background: #f5f5f5;
   margin-bottom: 0;
@@ -6,6 +6,9 @@
   border-radius: 0;
   box-shadow: none;
   border: 1px solid white;
+  max-height: 64px;
+  min-height: 64px;
+  margin: 0;
 
 
   &.incoming-active-request {
@@ -13,7 +16,7 @@
   }
 
   .left-icon-column {
-      height: 75px;
+      margin-right: 12px;
   }
 
   .request-content {
@@ -31,9 +34,22 @@
 
   .incoming-time {
       span {
-          font-weight: bold;
-          font-size: 12px;
+          // font-weight: bold;
+          font-size: 14px;
           margin: 0 .5rem;
+      }
+
+      &.new {
+        background:#2ed557;
+        border-radius: 20px 20px 20px 20px;
+        height: 32px;
+        width: 72px;
+        padding: .1rem;
+
+        span {
+          margin-left: 21px;
+          color: white;
+        }
       }
   }
 }
